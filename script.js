@@ -63,3 +63,17 @@ function closeWindow(element) {
 function openWindow(element) {
   element.classList.remove("hide");
 }
+
+var selectedIcon = undefined
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+} 
+function handleIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element);
+    openWindow(window);
+  } else {
+  selectIcon(element);
+}
+}

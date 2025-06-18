@@ -12,7 +12,7 @@
     <h2 id="welcomeopen" style="font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">Sapna Patel</h2>
     <h2 id="timeElement" style="font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">Time</h2>
   </div>
-  
+  <div class="main-grid">
   <div id="welcome" style="border: solid; display: flex; flex-direction: column; border-radius: 16px; position: absolute; top: calc(50% - 90px); left: calc(50% - 180px); backdrop-filter: blur(4px); background-color: rgba(243, 226, 248, 0.559);">
     <div id="welcomeheader" style="width: 100%; display: flex; align-items: center; cursor: move; justify-content: center; margin-top: 8px;">
       <h2 style="margin: 0px; font-weight: 500;">✭you can drag this window✭</h2>
@@ -24,22 +24,8 @@
       <h2> A student and avid <dfn>maker</dfn> with the goal of helping others <code> learn how to code</code>.</h2>
     </div>      
   </div>
-  
-<body style="font-family: Noto Sans, system-ui, sans-serif; height: 100vh; background-image: url(./beautifulImage.png); background-size: cover; background-repeat: no-repeat; margin: 0px;">
-	<div class="window" id="welcome" style="top: calc(50% - 90px); left: calc(50% - 180px);">
-		(window content)
-	</div>
-	<div style="position: absolute; window: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.125); color: #fff; justify-content: space-between; gap: 32px;">
-		(topbar content)
-	</div>
-	<div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
-		<p>Hacker Notes</p>
-	</div>
-</body>
+</div>
 
-
-  <script src="script.js"></script>
-  <script>
     function updateTime() {
       var currentTime = new Date().toLocaleString();
       var timeText = document.querySelector("#timeElement");
