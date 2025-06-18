@@ -1,8 +1,7 @@
-// Makes an HTML element draggable
+
 function dragElement(element) {
   var initialX = 0, initialY = 0, currentX = 0, currentY = 0;
 
-  // If there's a header, drag from there. Otherwise, drag from the whole element.
   var header = document.getElementById(element.id + "header");
   if (header) {
     header.onmousedown = startDragging;
@@ -36,10 +35,8 @@ function dragElement(element) {
   }
 }
 
-// Enable dragging for the welcome window
 dragElement(document.getElementById("welcome"));
 
-// Window open/close logic
 var welcomeScreen = document.querySelector("#welcome");
 var welcomeScreenClose = document.querySelector("#welcomeclose");
 var welcomeScreenOpen = document.querySelector("#welcomeopen");
@@ -77,12 +74,9 @@ function handleIconTap(element) {
   selectIcon(element);
 }
 }
-// ...existing code...
 
-// Enable dragging for the grid window
 dragElement(document.getElementById("gridWindow"));
 
-// Show/hide logic for grid window
 const gridWindow = document.getElementById("gridWindow");
 const gridWindowClose = document.getElementById("gridWindowClose");
 const gridIcon = document.getElementById("gridIcon");
