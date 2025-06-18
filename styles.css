@@ -1,0 +1,14 @@
+#pic {
+  background: linear-gradient(to right, rgb(245, 213, 255) , rgb(145, 120, 255) );
+}
+#welcome {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+#welcome.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+}

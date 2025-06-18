@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html>
-
-  <body style="background-image:url(./images/background.gif); background-size: cover;font-family: Noto Sans, sans-serif;">
-    <div style="display:flex; justify-content: space-between;position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(243, 226, 248, 0.559); justify-content: space-between;"">
-      <p style="font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;"> Sapna Patel</p>
-      <p id="timeElement" style="margin-right: font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;;">Time</p>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link JavaScript file -->
+  <script src="script.js" defer></script>
+</head>
+<body style="background-image:url(./images/background.gif); background-size: cover;font-family: Noto Sans, sans-serif;">
+  <div style="display:flex; justify-content: space-between; position: absolute; width: 100%; backdrop-filter: blur(10px); background-color: rgba(243, 226, 248, 0.559);">
+    <h2 id="welcomeopen" style="font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">Sapna Patel</h2>
+    <h2 id="timeElement" style="font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">Time</h2>
+  </div>
+  
+  <div id="welcome" style="border: solid; display: flex; flex-direction: column; border-radius: 16px; position: absolute; top: calc(50% - 90px); left: calc(50% - 180px); backdrop-filter: blur(4px); background-color: rgba(243, 226, 248, 0.559);">
+    <div id="welcomeheader" style="width: 100%; display: flex; align-items: center; cursor: move; justify-content: center; margin-top: 8px;">
+      <h2 style="margin: 0px; font-weight: 500;">✭you can drag this window✭</h2>
     </div>
-    
-    <div id="welcome" style="border: solid; display: flex; flex-direction: column; border-radius: 16px; position: absolute; top: calc(50% - 90px); left: calc(50% - 180px); backdrop-filter: blur(4px); background-color: rgb(252, 240, 255); border-radius: 16px; padding: 10px">
-    <img style="width: 150px; height: 150px; border-radius: 50px; object-fit: cover"
-    src="./images/sapna.jpeg"/>
-     <div id="welcomeheader" style="display:flex; align-items: center; cursor:move; justify-content: center; margin-top: 8px;"> <p style="margin: 0px; font-weight: 500"></p>✭you can drag this window✭</p></div>
-    <h1>Sapna Patel</h1>
-    <h2> A student and avid <dfn> maker</dfn> with the goal of helping others <code> learn how to code</code>.</h2>
-   </div>
-   <script src="script.js"></script>
-  </body>
-  <script>
+    <div id="pic" style= "margin: 6px; border-radius: 12px; width: 600px; height: 350px; padding: 16px;">
+      <h2 style="cursor: pointer; margin: 0px; font-weight: 500; padding-left: 550px;" id="welcomeclose">X</h2>
+      <img style="width: 200px; height: 200px; border-radius: 50px; object-fit: cover" src="./images/sapna.jpeg"/>
+      <h1>Sapna Patel</h1>
+      <h2> A student and avid <dfn>maker</dfn> with the goal of helping others <code> learn how to code</code>.</h2>
+    </div>      
+  </div>
+  
+<body style="font-family: Noto Sans, system-ui, sans-serif; height: 100vh; background-image: url(./beautifulImage.png); background-size: cover; background-repeat: no-repeat; margin: 0px;">
+	<div class="window" id="welcome" style="top: calc(50% - 90px); left: calc(50% - 180px);">
+		(window content)
+	</div>
+	<div style="position: absolute; window: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.125); color: #fff; justify-content: space-between; gap: 32px;">
+		(topbar content)
+	</div>
+	<div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+		<p>Hacker Notes</p>
+	</div>
+</body>
 
+
+  <script src="script.js"></script>
+  <script>
     function updateTime() {
-        var currentTime = new Date().toLocaleString();
-        var timeText = document.querySelector("#timeElement");
-        timeText.innerHTML = currentTime;
+      var currentTime = new Date().toLocaleString();
+      var timeText = document.querySelector("#timeElement");
+      timeText.innerHTML = currentTime;
     }
     setInterval(updateTime, 1000);
-
   </script>
+</body>
 </html>
