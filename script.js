@@ -77,3 +77,19 @@ function handleIconTap(element) {
   selectIcon(element);
 }
 }
+// ...existing code...
+
+// Enable dragging for the grid window
+dragElement(document.getElementById("gridWindow"));
+
+// Show/hide logic for grid window
+const gridWindow = document.getElementById("gridWindow");
+const gridWindowClose = document.getElementById("gridWindowClose");
+const gridIcon = document.getElementById("gridIcon");
+
+gridIcon.addEventListener("click", function() {
+  gridWindow.classList.remove("hide");
+});
+gridWindowClose.addEventListener("click", function() { 
+  gridWindow.classList.add("hide");
+});

@@ -26,6 +26,22 @@
   </div>
 </div>
 
+<!-- Add this icon somewhere in your .main-grid or page -->
+<img id="gridIcon" src="wave.png" alt=" Greetings Window" style="width:60px;cursor:pointer;margin:32px;">
+
+<!-- Add this new window (hidden by default) -->
+<div id="gridWindow" class="hide" style="border: solid; border-radius: 16px; position: absolute; top: 120px; left: 120px; background: rgba(255,255,255,0.9); min-width: 350px;">
+  <div id="gridWindowHeader" style="width: 100%; display: flex; align-items: center; cursor: move;">
+    <span style="font-weight: 500;"><h2>Greetings!!</h2></span>
+    <span id="gridWindowClose" style="cursor:pointer;font-weight:bold; padding-right: 20px;">X</span>
+  </div>
+  <div class="popup-grid">
+    <div id="greetings-content"><h2>Hello</h2></div>
+     <div id="greetings-content"><h2>Hi</h2></div>
+  </div>
+</div>
+
+  <script
     function updateTime() {
       var currentTime = new Date().toLocaleString();
       var timeText = document.querySelector("#timeElement");
